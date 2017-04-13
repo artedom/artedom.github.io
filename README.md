@@ -1,1 +1,0 @@
-# artedom.github.io

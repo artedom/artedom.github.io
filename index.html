@@ -1,4 +1,4 @@
-<!-- Next -->
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html lang="pt-br">
 <head>
@@ -24,11 +24,44 @@ box-shadow: 5px 5px 5px #ffffff;
 width:91%; overflow:hidden;}
 	          #caixa{text-align:left;color:#ffffff;font-family: 
 Arial,Helvetica,sans-serif;font-size: 1.0em;width:78%;padding:2% 4% 2% 
-4%; overflow:hidden;float:right;}
+4%; overflow:hidden;float:left;
+
+animation-duration: 1s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 0%;
+    width: 0%
+  }
+
+  to {
+    margin-left: 0%;
+    width: 0%;
+  }
+
+
+
+}
                     #caixa2{text-align:left;color:#ffffff;font-family: 
 Arial,Helvetica,sans-serif;font-size: 0.8em;width:15%;padding:2% 4% 2% 
 4%; overflow:hidden;float:left;}
-        p {text-align: justify;text-indent: 2em;}
+        p {text-align: justify;text-indent: 2em;animation-duration: 3s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
 </style>
 <script type="text/javascript">
 </script>

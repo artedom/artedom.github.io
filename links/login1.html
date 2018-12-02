@@ -1,264 +1,38 @@
-
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html lang="pt-br">
 <head>
 <meta http-equiv="content-type" content="text/html;charset=utf-8">
-<title>login</title>
-<style type="text/css">
-html, body {
- text-align: justify;font-family: 
-Arial,Helvetica,sans-serif;font-size: 1em;overflow-wrap: break-word; word-wrap: break-word; -
-webkit-hyphens: auto; -ms-hyphens: auto; -moz-hyphens: auto; hyphens: auto;
-  background: #413cae; }
-.botao{
-float:left
-}
-             img {text-align:center;width:30%;}
-               h1 {font-family:Arial,Helvetica,sans-serif;}
-                h2 {color:#239985;font-family:Arial,Helvetica,sans-serif; } 
-                 h3 {color:#239985;font-family:Arial,Helvetica,sans-serif;}
-               ul { text-align:left; color:#0b1182;}
-                p { margin: 5px 0 15px;  text-align: justify; text-indent: 2em; font-family: 
-Arial,Helvetica,sans-serif;font-size: 1em;overflow-wrap: break-word; word-wrap: break-word; -
-webkit-hyphens: auto; -ms-hyphens: auto; -moz-hyphens: auto; hyphens: auto;}
-                   p.base{ margin: 5px 0 15px;  text-align: justify;
-                            text-indent: 2em;font-family: Arial,Helvetica,sans-serif;font-size: 
-0.75em;overflow-wrap: break-word; word-wrap: break-word; -webkit-hyphens: auto; -ms-hyphens: 
-auto; -moz-hyphens: auto; hyphens: auto;}
-                      p.red { padding:0 8% 0 8% ;color:#b20000; font-size:small;font-family: 
-Monospace,Verdana,Arial,Helvetica,sans-serif;overflow-wrap: break-word; word-wrap: break-word; -
-webkit-hyphens: auto; -ms-hyphens: auto; -moz-hyphens: auto; hyphens: auto;}
+<title>login2</title>
+<link rel="stylesheet" type="text/css" href="../style/login.css"> 
+<script type="text/javascript" src="../js/login.js"></script>
 
-                       p.ref { padding:0 5% 0 5% ;color:#135908; font-size:small;font-
-family:arial, helvetica, sans-serif ;font-family: Arial,Helvetica,sans-serif;overflow-wrap: break-
-word; word-wrap: break-word; -webkit-hyphens: auto; -ms-hyphens: auto; -moz-hyphens: auto; 
-hyphens: auto;}
-
-                               p.gravu { padding:0 8% 0 8% ;color:#304561;background-color:#c2c8c3; font-size:small; text-transform: uppercase;font-family: 
-Monospace,Verdana,Arial,Helvetica,sans-serif;overflow-wrap: break-word; word-wrap: break-word; -
-webkit-hyphens: auto; -ms-hyphens: auto; -moz-hyphens: auto; hyphens: auto;}
-                                   p.pag { color:#ffffff;}
-
-                        p.formata { padding:0 5% 0 5% ;color:#12263a; font-size:x-small;font-
-family: Monospace, courier new ;}
-                #filete {border:0.1em solid;padding: 2% 2% 2% 2%;}
-                #folha {text-align:left;background-color:#f9f9f9;width: 75%;margin: 0 
-auto;border:1px solid blue;overflow:hidden;
-                              padding: 2% 2% 2% 2%;}
-                   #meia { text-align:justify;width:41%;padding:5% 4% 5% 
-4%; overflow:hidden;float:left;overflow-wrap: break-word; word-wrap: break-word; -webkit-hyphens: 
-auto; -ms-hyphens: auto; -moz-hyphens: auto; hyphens: auto;}
-                     #inteira { text-align:justify;background-color:#ffffff;width:91%;padding:2% 
-4% 2% 4%; overflow:hidden;overflow-wrap: break-word; word-wrap: break-word; -webkit-hyphens: 
-auto; -ms-hyphens: auto; -moz-hyphens: auto; hyphens: auto;}
-	          #caixa{text-align:justify;background-color:#c2c8c3;width:91%;padding:2% 4% 2% 
-4%; overflow:hidden;overflow-wrap: break-word; word-wrap: break-word; -webkit-hyphens: auto; -ms-
-hyphens: auto; -moz-hyphens: auto; hyphens: auto;}
-
-input[type=radio]:not(old):checked +  label > span > span{
-  display          : block;
-  width            : 0.5em;
-  height           : 0.5em;
-  margin           : 0.125em;
-  border           : 0.0625em solid rgb(115,153,77);
-  border-radius    : 0.125em;
-  background       : rgb(153,204,102);
-  background-image :    -moz-linear-gradient(rgb(179,217,140),rgb(153,204,102));
-  background-image :     -ms-linear-gradient(rgb(179,217,140),rgb(153,204,102));
-  background-image :      -o-linear-gradient(rgb(179,217,140),rgb(153,204,102));
-  background-image : -webkit-linear-gradient(rgb(179,217,140),rgb(153,204,102));
-  background-image :         linear-gradient(rgb(179,217,140),rgb(153,204,102));
-}
-
-
-/* codigo css para organograma */
-
-.organigrama * {
-  margin: 0px;
-  padding: 0px;
-}
-
-.organigrama ul {
-	padding-top: 20px;
-  position: relative;
-}
-
-.organigrama li {
-	float: left;
-  text-align: center;
-	list-style-type: none;
-	padding: 20px 5px 0px 5px;
-  position: relative;
-}
-
-.organigrama li::before, .organigrama li::after {
-	content: '';
-	position: absolute;
-  top: 0px;
-  right: 50%;
-	border-top: 3px solid #08172C;
-	width: 50%;
-  height: 20px;
-}
-
-.organigrama li::after{
-	right: auto;
-  left: 50%;
-	border-left: 3px solid #08172C;
-}
-
-.organigrama li:only-child::before, .organigrama li:only-child::after {
-	display: none;
-}
-
-.organigrama li:only-child {
-  padding-top: 0;
-}
-
-.organigrama li:first-child::before, .organigrama li:last-child::after{
-	border: 0 none;
-}
-
-.organigrama li:last-child::before{
-	border-right: 3px solid #08172C;
-	-webkit-border-radius: 0 5px 0 0;
-	-moz-border-radius: 0 5px 0 0;
-	border-radius: 0 5px 0 0;
-}
-
-.organigrama li:first-child::after{
-	border-radius: 5px 0 0 0;
-	-webkit-border-radius: 5px 0 0 0;
-	-moz-border-radius: 5px 0 0 0;
-}
-
-.organigrama ul ul::before {
-	content: '';
-	position: absolute;
-  top: 0;
-  left: 50%;
-	border-left: 3px solid #08172C;
-	width: 0;
-  height: 20px;
-}
-
-.organigrama li a {
-	border: 2px solid #07175B;
-	padding: 1em 0.75em;
-	text-decoration: none;
-	color: #333;
-  background-color: rgba(255,255,255,0.5);
-	font-family: arial, verdana, tahoma;
-	font-size: 0.85em;
-	display: inline-block;
-	border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-  -webkit-transition: all 500ms;
-  -moz-transition: all 500ms;
-  transition: all 500ms;
-}
-
-.organigrama li a:hover {
-	border: 1px solid #fff;
-	color: #ddd;
-  background-color: rgba(255,128,0,0.7);
-	display: inline-block;
-}
-
-.organigrama > ul > li > a {
-  font-size: 1em;
-  font-weight: bold;
-}
-
-.organigrama > ul > li > ul > li > a {
-  width: 8em;
-}
-pre { color:#12263a; font-size:small;font-
-family: Monospace, Courrier New ;}
-
-table {border: 0px solid black; border-spacing: 10px; border-collapse: separate;
-         background: #B4C9E2; }
-table td{border: 1px solid black; text-align: center; padding: 5px; margin: 5px}
-
-
-</style>
-<script type="text/javascript">
-
-function Login(){
-var done=0;
-var username=document.login.username.value;
-username=username.toLowerCase();
-var password=document.login.password.value;
-password=password.toLowerCase();
-
-if (username=="dom" && password=="artedom") { window.location="https://artedom.github.io/menu.html"; done=1; }
-//if (username=="outro" && password=="outrasenha") { window.location="http://www.seu_site.com.br"; done=1; }
-if (done==0) { window.location="https://artedom.github.io/links/novamente.html"; done=1; }
-}
-</script>
 </head>
+
 <body>
-<div id="folha">
-
-<center>
+<link href='https://fonts.googleapis.com/css?family=Ubuntu:500' rel='stylesheet' type='text/css'>
 <form name=login>
-<table width=10% border=1 cellpadding=3 height="20%">
-
-
-<tr><td colspan=2 height="13"><center>
-
-  <p><font face="Arial Black">Área restrita:</font></p>
-  </center>
-
-</td></tr>
-
-<tr><td >
-  
-  <img border="0" src="https://raw.githubusercontent.com/artedom/artedom.github.io/master/img/login1.jpg" width="50%" height="50%" align="left">
+<div class="login">
+<div class="login-header">
+ <h1>Login</h1>
+</div>
+<div class="login-form" >
+  <h3> Usuário: </h3>
  
- <br><br>
-  Usuário:
+ <input type=text   name=username value=login " ><br>
 
-</td>  <td >
-  <input type=text   name=username value=login size="10%" >
+ <h3> Senha:</h3>
 
-</td></tr>
+ <input type=password name=password "><br>
 
-
-
-
-
-
-<tr><td > 
- 
-  <img border="0" src="https://svgsilh.com/svg/538721.svg" width="50%" height="50%"align="left" >
-
-
-Senha:
-
-</td> <td>
-
-  <input type=password name=password size="10%">
-
-
-</td> </tr>
-
-<tr><td height="26"><h3>...............</h3></td><td><h3>.........</h3></td></tr>
-
-
-<tr><td colspan=2 align=left height="26">
-
-<input type=button value="Entrar" class="botao" onClick="Login()">
-
-</td></tr>
-
-</table>
+ <input type=button value="Entrar" class="botao" onClick="Login()"><br>
+ <br>
+    <a href="https://artedom.github.io/" class="sign-up">voltar</a>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>       
+</div>
+</div>
+</div>
 </form>
-</center>
 
-<p>
 
-<p align="center" style="margin-top: 0; margin-bottom: 0"> </p>
-</div></body>
+</body>
 </html>

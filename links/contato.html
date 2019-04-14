@@ -1,0 +1,112 @@
+ <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang="pt-br">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Bem vindo!</title>
+     
+      <link rel="stylesheet" href="style/font_incons.css" type="text/css">
+       <link rel="stylesheet" href="style/menu.css" type="text/css">
+   
+     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+ </head>
+ <body>  
+   
+    <nav>
+        <div class="nav-wrapper">
+            <a href="https://artedom.github.io/" class="brand-logo"> &nbsp; <img src="https://raw.githubusercontent.com/artedom/img/gallery/assinatura2.png"/>   </a>
+            <a href="#" data-activates="menu-mobile" class="button-collapse">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="https://artedom.github.io/">Início</a></li>
+                <li><a href="#">Desenhos</a></li>
+                <li><a href="https://artedom.github.io/links/animation.html">Animação</a></li>
+                <li><a href="https://artedom.github.io/links/login1.html">Estudos</a></li>
+            </ul>
+            <ul class="side-nav" id="menu-mobile">
+                <li><a href="https://artedom.github.io/">Início</a></li>
+                <li><a href="#">Desenhos</a></li>
+                <li><a href="https://artedom.github.io/links/animation.html">Animação</a></li>
+                <li><a href="https://artedom.github.io/links/login1.html">Estudos</a></li>
+            </ul>
+        </div>
+    </nav>
+          <br>
+    <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize1.js"></script>
+    <script>
+    $(function(){
+        $(".button-collapse").sideNav();
+    });
+    </script>
+    
+    <label>Informe seu nome:</label> <br><br>
+ <input id="id1" type="text"/>
+ <br><br>
+  <label>Informe seu email ou telefone para contato:</label> <br><br>
+ <input id="id2" type="text"/>
+ 
+ <br><br>
+<label for="story">Digite sua mensagem aqui:</label> <br><br>
+
+<form id="redir">
+
+  <textarea name="code" placeholder="mensagem"  rows="10" cols="50"> </textarea>
+  <br>
+  <button>Enviar</button>
+</form>
+
+<script>
+(function(){
+  'use strict';
+
+	
+  const url = "https://api.telegram.org/bot647898423:AAGJPakEKeG3iob5JUsVcHvXzd0OUOvJEus/sendMessage?chat_id=-1001290396284&text=";
+  
+        //Obtem o valor do elemento textfield e armazena na variável "valor"
+  var valor = document.getElementById('id1').value;
+  var nome = "nome: " ;
+  var email = " - contato: " ;
+  var texto = " - mensagem: " ;
+        //Obtem o valor do elemento textfield e armazena na variável "valor2"
+  var valor2 = document.getElementById('id2').value;
+  var codigo;
+  
+
+  document.getElementById('redir').onsubmit = function(e) {
+  
+  	
+    e.preventDefault();
+    
+    
+    codigo = this.code.value;
+    
+
+    if (codigo.trim() === '') {
+      alert('Por favor, insira um código válido');
+      return false;
+    }
+
+		
+    window.open(url + nome + valor + email + valor2 + texto + codigo);
+    alert('Mensagem enviada com sucesso!');
+    window.location = "https://artedom.github.io/";
+    
+  }
+
+})();
+
+
+</script>
+   
+  <footer>
+  <div class="wrapper">
+   
+  <p class="copyright"> 
+    Copyright © Domingues 2018. Todos os direitos reservados.
+  </p>
+  </div>
+  </footer>  
+    
+</body>
+</html>

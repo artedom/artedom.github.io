@@ -1,3 +1,4 @@
+
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
 <html lang="pt-br">
 <head>
@@ -8,7 +9,7 @@ html, body {
   background: #413cae; }
 
              img {text-align:center;width:100%;}
-               h1 {font-family:Arial,Helvetica,sans-serif;}
+               h1 {color:#ffffff;font-family:Arial,Helvetica,sans-serif;}
                 h2 {color:#239985;font-family:Arial,Helvetica,sans-serif; } 
                  h3 {color:#239985;font-family:Arial,Helvetica,sans-serif;}
                
@@ -43,6 +44,36 @@ family: Monospace, courier new ;}
                 #folha {text-align:left;background-color:#d9dce0;width: 75%;margin: 0 
 auto;border:1px solid blue;overflow:hidden;
                               padding: 2% 2% 2% 2%;}
+                .imagemDeFundo{
+    border: 1px solid black;
+    background: url('https://raw.githubusercontent.com/artedom/artedom.github.io/master/img/bot.png') no-repeat; 
+   background-position: center; background-size: 100% 100%;
+  
+}
+                   .bt {
+border:1px solid #25692A;
+border-radius:4px;
+display:inline-block;
+cursor:pointer;
+font-family:Verdana;
+font-weight:bold;
+font-size:13px;
+padding:6px 10px;
+text-decoration:none;
+}
+ 
+ .bt-az {
+border-color:#46a7f5;
+background:linear-gradient(to bottom, #86c6f8 5%, #46a7f5 100%);
+box-shadow:inset 0px 1px 0px 0px #d7ecfd;
+color:#fff;
+text-shadow:0px 1px 0px #528009;  
+}
+  
+   .bt-az:hover {
+background:linear-gradient(to bottom, #46a7f5 5%, #86c6f8 100%);
+}
+                   
                    #meia { text-align:justify;width:41%;padding:5% 4% 5% 
 4%; overflow:hidden;float:left;overflow-wrap: break-word; word-wrap: break-word; -webkit-hyphens: 
 auto; -ms-hyphens: auto; -moz-hyphens: auto; hyphens: auto;}
@@ -173,7 +204,7 @@ input[type=radio]:not(old):checked +  label > span > span{
   width: 8em;
 }
 pre { color:#12263a; font-size:small;font-
-family: Monospace, Courrier New ;}
+family: Monospace, Courrier <h1>.</h1>New ;}
 
 table {border: 0px solid black; border-spacing: 10px; border-collapse: separate;
          background: #B4C9E2; }
@@ -183,15 +214,9 @@ table td{border: 1px solid black; text-align: center; padding: 5px; margin: 5px}
 </script>
 </head>
 <body>
-<div id="folha"> 
+<div id="folha" class="imagemDeFundo">
+<h1>.</h1><br><h1>.</h1><br><h1>.</h1><br>
 
-	<div id="meia"> <figure>
-		<img src="https://static7.depositphotos.com/1126128/793/i/950/depositphotos_7933689-stock-photo-mailman.jpg"
-		     width="25%" />
-		</figure></div> <div id="meia"> <figure>
- <img src="https://manualdousuario.net/wp-content/uploads/2018/11/Telegram-logo-810x540.png" 
- alt="Telegram" title="Mensageiro" width="25%" /> 	</figure> </div>
-<h2>Preencha os campos, confirme e envie, sua mensagem será direcionada para o meu Telegram imediatamente.</h2>	
 </Div >
 
 <DIV id="folha">
@@ -199,58 +224,69 @@ table td{border: 1px solid black; text-align: center; padding: 5px; margin: 5px}
 <form id="redir">
  
  <label><b>Informe seu nome:</b></label> <br><br>
- <input id="id1" type="text"/> 
+    <input  name="T1" type="text"/>
  <br><br>
-  <label><b>Informe seu email ou telefone para contato:</b></label> <br><br>
- <input id="id2" type="text"/>
+  <label><b>Informe seu email ou outra forma para contato:</b></label> <br><br>
+      <input  name="T2" type="text"/>
  
  <br><br>
-<label><b>Digite sua mensagem aqui:</b></label> <br><br>
-
-  <textarea name="code" placeholder="mensagem"  rows="10" cols="50" onchange="location.reload()" > </textarea>
-  <br><br> <label><b>Tecle "Confirmar" antes de "Enviar", e aguarde a abrir a pagina de cofirmação de envio.</b></label><br><br>
-  <div id="meia"> <button>Confirmar</button> <label> </div> <div id="meia"></label><button>Enviar</button></div>
+<label><b>Digite sua mensagem:</b></label> <br><br>
+  <textarea name="code" placeholder="mensagem"  rows="10" cols="50" > </textarea>
+  
+  <br><br> 
+  <div id="meia">   </div> <div id="meia"><button class="bt bt-az">   Enviar mensagem  </button></div>
 </form>
 
 <script>
 (function(){
   'use strict';
 
-	
-  const url = "https://api.telegram.org/bot647898423:AAGJPakEKeG3iob5JUsVcHvXzd0OUOvJEus/sendMessage?chat_id=-1001290396284&text=";
+	// constante com o valor imutÃ¡vel, no caso, a url que vocÃª deseja usar
+  const url = "https://www.google.com/";
   
-        //Obtem o valor do elemento textfield e armazena na variável "valor"
-  var valor = document.getElementById('id1').value;
+        //Obtem o valor do elemento textfield e armazena na variÃ¡vel 
   var nome = "nome: " ;
   var email = " - contato: " ;
   var texto = " - mensagem: " ;
-        //Obtem o valor do elemento textfield e armazena na variável "valor2"
-  var valor2 = document.getElementById('id2').value;
+        // variÃ¡vel que irÃ¡ armazenar o cÃ³digo que o usuÃ¡rio vai digitar
   var codigo;
- 
-
+  var quem;
+  var msgm;
+            // cria o evento que dispara a funÃ§Ã£o
   document.getElementById('redir').onsubmit = function(e) {
   
-  	
+  	// previne a aÃ§Ã£o padrÃ£o do submit, que nesse caso Ã© recarregar a pÃ¡gina para enviar os dados
     e.preventDefault();
     
-    
+         // pega o valor que o usuÃ¡rio digitou no input
+        // this = elemento que disparou o evento
+        // code = atributo 'name' do input
+        // value = adivinha?
     codigo = this.code.value;
+    quem = this.T1.value;
+    msgm = this.T2.value;
     
-
-    if (codigo.trim() === '') {
-      alert('Por favor, insira um código válido');
+          // nÃ£o executar a aÃ§Ã£o caso o campo cÃ³digo esteja vazio
+    if (quem.trim() === '') {
+      alert('Por favor, insira seu nome por gentileza.');
       return false;
     }
     
-   
+   if (msgm.trim() === '') {
+      alert('Por favor, insira um email ou similar para contato.');
+      return false;
+    }
+    
+    if (codigo.trim() === '') {
+      alert('Por favor, insira uma mensagem antes de enviar.');
+      return false;
+    }
+    
 
-	
-    window.open(url + nome + valor + email + valor2 + texto + codigo);
-	  winpop.blur();
-          window.focus();
+	// se o return false nÃ£o interromper a execuÃ§Ã£o do script, entÃ£o tudo foi um sucesso
+      window.open(url + nome + quem + email + msgm + texto + codigo);
     alert('Mensagem enviada com sucesso!');
-   
+    
     
   }
 
@@ -260,8 +296,7 @@ table td{border: 1px solid black; text-align: center; padding: 5px; margin: 5px}
 </script>
 
 
-<a href="https://artedom.github.io/" >Voltar a pagina principal</a>
-	<br> <br><br>
+
 
 	
 <br> <br><br>

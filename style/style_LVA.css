@@ -1,43 +1,51 @@
 /* dimension small*/
-  @media (max-width: 768px) {
+
+   @media (max-width: 768px) {
+  
 body{
  font-family: sans-serif;
 }
 /*  Div otopo  */
 .otopo {
   background: #efbe5d;
-  width: 100%;
-  position: fixed;
- top: 0;
- left: 0;
- padding: 0px 0px 0px 0px;
-   margin: 0px 0px 0px 0px;
+  width: 97%;
+  position: absolute;
+ top: 0px;
+ left: 0px;
+ right: 0px;
+    margin: 0 0 0 0;
    box-shadow: 3px 1px 3px #999999; 
+   
+   
 }
-
- #meiauno { text-align:justify;width:25%;padding:5% 4% 5% 
-4%; overflow:hidden;float:left;overflow-wrap: break-word; word-wrap: break-word; -webkit-hyphens: 
-auto; -ms-hyphens: auto; -moz-hyphens: auto; hyphens: auto;
+/* padding = top dir  down left*/
+ #meiauno { position: relative;text-align:left;width:13%;padding:3% 20% 2% 1%; 
+ overflow:hidden;float:left;
+ overflow-wrap: break-word; word-wrap: break-word; -webkit-hyphens: 
+auto; -ms-hyphens: auto; -moz-hyphens: auto; hyphens: auto; border
 }
- #meia { text-align:justify;width:41%;padding:5% 4% 5% 
-4%; overflow:hidden;float:left;overflow-wrap: break-word; word-wrap: break-word; -webkit-hyphens: 
-auto; -ms-hyphens: auto; -moz-hyphens: auto; hyphens: auto;
+ #meia { position: relative;text-align:justify;width:47%;padding:10% 14% 1% 1%; 
+ overflow:hidden;float:left;
+ overflow-wrap: break-word; word-wrap: break-word; -webkit-hyphens: 
+auto; -ms-hyphens: auto; -moz-hyphens: auto; hyphens: auto; 
 }
 
 /* icone do menu */
 .barrinha {
-  width: 35px;
-  height: 5px;
+  width: 8vw;
+  height: 1vw;
+  float:left;
   background-color: #ffffff;
-  margin: 6px 0;
-  box-shadow: 1px 1px 3px #412c02; 
+  margin: 5% 5% 10% 5% ;
+   box-shadow: 1px 1px 3px #412c02; 
 
 }
-.descreve {
-width: 25%;
- height: 27 px;
- background: red;
-}
+
+img{
+	max-width:100%;
+	height:auto; }
+
+
 
 /* estilizando a div orverlay */
 .overlay {

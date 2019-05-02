@@ -1,0 +1,253 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html lang="pt-br">
+<head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8">
+<title>bootys 2</title>
+<style type="text/css">
+html, body {
+ text-align: justify;font-family: 
+Arial,Helvetica,sans-serif;font-size: 1em;overflow-wrap: break-word; word-wrap: break-word; -
+webkit-hyphens: auto; -ms-hyphens: auto; -moz-hyphens: auto; hyphens: auto;
+  background: #413cae; }
+               img {width:15%; height:10%;}
+               h1 {font-family:Arial,Helvetica,sans-serif;}
+                h2 {color:#239985;font-family:Arial,Helvetica,sans-serif; } 
+                 h3 {color:#239985;font-family:Arial,Helvetica,sans-serif;}
+               ul { text-align:left; color:#0b1182;}
+b { color:#0b1182; }
+                p { margin: 5px 0 15px;  text-align: justify; text-indent: 2em; font-family: 
+Arial,Helvetica,sans-serif;font-size: 1em;overflow-wrap: break-word; word-wrap: break-word; -
+webkit-hyphens: auto; -ms-hyphens: auto; -moz-hyphens: auto; hyphens: auto;}
+                   p.base{ margin: 5px 0 15px;  text-align: justify;
+                            text-indent: 2em;font-family: Arial,Helvetica,sans-serif;font-size: 
+0.75em;overflow-wrap: break-word; word-wrap: break-word; -webkit-hyphens: auto; -ms-hyphens: 
+auto; -moz-hyphens: auto; hyphens: auto;}
+                      p.red { padding:0 8% 0 8% ;color:#b20000; font-size:small;font-family: 
+Monospace,Verdana,Arial,Helvetica,sans-serif;overflow-wrap: break-word; word-wrap: break-word; -
+webkit-hyphens: auto; -ms-hyphens: auto; -moz-hyphens: auto; hyphens: auto;}
+
+                       p.ref { padding:0 5% 0 5% ;color:#135908; font-size:small;font-
+family:arial, helvetica, sans-serif ;font-family: Arial,Helvetica,sans-serif;overflow-wrap: break-
+word; word-wrap: break-word; -webkit-hyphens: auto; -ms-hyphens: auto; -moz-hyphens: auto; 
+hyphens: auto;}
+
+                               p.gravu { padding:0 8% 0 8% ;color:#304561;background-color:#c2c8c3; font-size:small; text-transform: uppercase;font-family: 
+Monospace,Verdana,Arial,Helvetica,sans-serif;overflow-wrap: break-word; word-wrap: break-word; -
+webkit-hyphens: auto; -ms-hyphens: auto; -moz-hyphens: auto; hyphens: auto;}
+                                   p.pag { color:#ffffff;}
+
+                        p.formata { padding:0 5% 0 5% ;color:#12263a; font-size:x-small;font-
+family: Monospace, courier new ;}
+                #filete {border:0.1em solid;padding: 2% 2% 2% 2%;}
+                #folha {text-align:left;background-color:#f9f9f9;width: 90%;margin: 0 
+auto;border:1px solid blue;overflow:hidden;
+                              padding: 2% 2% 2% 2%;}
+                   #meia { text-align:justify;width:41%;padding:5% 4% 5% 
+4%; overflow:hidden;float:left;overflow-wrap: break-word; word-wrap: break-word; -webkit-hyphens: 
+auto; -ms-hyphens: auto; -moz-hyphens: auto; hyphens: auto;}
+                     #inteira { text-align:justify;background-color:#ffffff;width:91%;padding:2% 
+4% 2% 4%; overflow:hidden;overflow-wrap: break-word; word-wrap: break-word; -webkit-hyphens: 
+auto; -ms-hyphens: auto; -moz-hyphens: auto; hyphens: auto;}
+	          #caixa{text-align:justify;background-color:#c2c8c3;width:91%;padding:2% 4% 2% 
+4%; overflow:hidden;overflow-wrap: break-word; word-wrap: break-word; -webkit-hyphens: auto; -ms-
+hyphens: auto; -moz-hyphens: auto; hyphens: auto;}
+
+input[type=radio]:not(old):checked +  label > span > span{
+  display          : block;
+  width            : 0.5em;
+  height           : 0.5em;
+  margin           : 0.125em;
+  border           : 0.0625em solid rgb(115,153,77);
+  border-radius    : 0.125em;
+  background       : rgb(153,204,102);
+  background-image :    -moz-linear-gradient(rgb(179,217,140),rgb(153,204,102));
+  background-image :     -ms-linear-gradient(rgb(179,217,140),rgb(153,204,102));
+  background-image :      -o-linear-gradient(rgb(179,217,140),rgb(153,204,102));
+  background-image : -webkit-linear-gradient(rgb(179,217,140),rgb(153,204,102));
+  background-image :         linear-gradient(rgb(179,217,140),rgb(153,204,102));
+}
+
+
+/* codigo css para organograma */
+
+.organigrama * {
+  margin: 0px;
+  padding: 0px;
+}
+
+.organigrama ul {
+	padding-top: 20px;
+  position: relative;
+}
+
+.organigrama li {
+	float: left;
+  text-align: center;
+	list-style-type: none;
+	padding: 20px 5px 0px 5px;
+  position: relative;
+}
+
+.organigrama li::before, .organigrama li::after {
+	content: '';
+	position: absolute;
+  top: 0px;
+  right: 50%;
+	border-top: 3px solid #08172C;
+	width: 50%;
+  height: 20px;
+}
+
+.organigrama li::after{
+	right: auto;
+  left: 50%;
+	border-left: 3px solid #08172C;
+}
+
+.organigrama li:only-child::before, .organigrama li:only-child::after {
+	display: none;
+}
+
+.organigrama li:only-child {
+  padding-top: 0;
+}
+
+.organigrama li:first-child::before, .organigrama li:last-child::after{
+	border: 0 none;
+}
+
+.organigrama li:last-child::before{
+	border-right: 3px solid #08172C;
+	-webkit-border-radius: 0 5px 0 0;
+	-moz-border-radius: 0 5px 0 0;
+	border-radius: 0 5px 0 0;
+}
+
+.organigrama li:first-child::after{
+	border-radius: 5px 0 0 0;
+	-webkit-border-radius: 5px 0 0 0;
+	-moz-border-radius: 5px 0 0 0;
+}
+
+.organigrama ul ul::before {
+	content: '';
+	position: absolute;
+  top: 0;
+  left: 50%;
+	border-left: 3px solid #08172C;
+	width: 0;
+  height: 20px;
+}
+
+.organigrama li a {
+	border: 2px solid #07175B;
+	padding: 1em 0.75em;
+	text-decoration: none;
+	color: #333;
+  background-color: rgba(255,255,255,0.5);
+	font-family: arial, verdana, tahoma;
+	font-size: 0.85em;
+	display: inline-block;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+  -webkit-transition: all 500ms;
+  -moz-transition: all 500ms;
+  transition: all 500ms;
+}
+
+.organigrama li a:hover {
+	border: 1px solid #fff;
+	color: #ddd;
+  background-color: rgba(255,128,0,0.7);
+	display: inline-block;
+}
+
+.organigrama > ul > li > a {
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.organigrama > ul > li > ul > li > a {
+  width: 8em;
+}
+pre { color:#12263a; font-size:small;font-
+family: Monospace, Courrier New ;}
+
+table {border: 0px solid black; border-spacing: 10px; border-collapse: separate;
+         background: #B4C9E2; }
+table td{border: 1px solid black; text-align: center; padding: 5px; margin: 5px}
+
+</style>
+<script type="text/javascript">
+
+</script>
+</head>
+<body>
+<div id="folha">
+
+ <iframe name="Frame1" id="Frame1" width="100%" height="66%" src="" frameborder="1"></iframe>
+<!-- comentarios -->
+<!-- Em '==IDvideo==', remover as aspas -->
+<!-- href para videos do VIMEO é : https://vimeo.com/moogaloop.swf?clip_id='==IDvideo=='&amp;autoplay=0 --> <!-- Obs: A imagem de capa do video fica no codigo e não na id -->
+<!-- href para videos do youturbe é : https://www.youtube.com/embed/'==IDvideo==' --> <!-- Obs: A imagem de capa fica na id do video, img src="http://img.youtube.com/vi/'==IDvideo=='/mqdefault.jpg" -->
+<!-- href para videos do Xvideos é :https://static-hw.xvideos.com/swf/xv-player.swf?id_video= --> <!-- Obs: A imagem de capa do video fica no codigo e não na id -->
+ 
+ </div> <hr> <div id="folha"> 
+ 
+  <a href="https://static-hw.xvideos.com/swf/xv-player.swf?id_video=11127866" target="Frame1"><img src="http://img-hw.xvideos-cdn.com/videos/thumbs169ll/4b/58/68/4b5868eb6bf94e8055ac145548edce25/4b5868eb6bf94e8055ac145548edce25.1.jpg" title="PervCity Kandice Up Her Asian AssHole" border="0"></a>
+ 
+ <a href="https://static-hw.xvideos.com/swf/xv-player.swf?id_video=27200973" target="Frame1"><img src="http://img-l3.xvideos.com/videos/thumbs169ll/4c/1a/d2/4c1ad2e6778f9e8ec82106bc9f6159d3/4c1ad2e6778f9e8ec82106bc9f6159d3.6.jpg" title="Big tits and fat booty latina blonde Luna Star gets anal sex " border="0"></a>
+ 
+  <a href="https://static-hw.xvideos.com/swf/xv-player.swf?id_video=23144585" target="Frame1"><img src="http://img-egc.xvideos-cdn.com/videos/thumbs169ll/6d/66/d8/6d66d8cb9194e9f6f03881ac98021364/6d66d8cb9194e9f6f03881ac98021364.30.jpg" title="Hot big ass latina chick brunette Jynx Maze gets anal fucked" border="0"></a>
+ 
+ <a href="https://static-hw.xvideos.com/swf/xv-player.swf?id_video=18658805" target="Frame1"><img src="http://img-l3.xvideos.com/videos/thumbs169ll/3c/be/05/3cbe056c3265d1de10ec8d31c444f074/3cbe056c3265d1de10ec8d31c444f074.22.jpg" title="beautiful sexy girl love it anal sex and blowjob doggystyle" border="0"></a>
+ 
+ <a href="https://static-hw.xvideos.com/swf/xv-player.swf?id_video=25522809" target="Frame1"><img src="http://img-egc.xvideos-cdn.com/videos/thumbs169ll/da/48/e7/da48e70668adcc5099599c0c5949f4d0/da48e70668adcc5099599c0c5949f4d0.11.jpg" title="TeensLoveAnal - Prankwar with Boyfriend Turns Into Anal" border="0"></a>
+ 
+  <a href="https://static-hw.xvideos.com/swf/xv-player.swf?id_video=6109810" target="Frame1"><img src="http://img-hw.xvideos-cdn.com/videos/thumbs169ll/da/10/47/da10473d1b6ddb0f65a5e6c46d9dd494/da10473d1b6ddb0f65a5e6c46d9dd494.15.jpg" title="Tight ass Henessy butt fucked rough" border="0"></a>
+  
+  </div> <hr> <div id="folha"> 
+
+ <a href="https://static-hw.xvideos.com/swf/xv-player.swf?id_video=17354567" target="Frame1"><img src="http://img-hw.xvideos-cdn.com/videos/thumbs169ll/31/af/b4/31afb4ef23f5416ae816e23fe57dd406/31afb4ef23f5416ae816e23fe57dd406.22.jpg" title="Asstraffic brunette doggystyle anal on the sofa" border="0"></a>
+ 
+ <a href="https://static-hw.xvideos.com/swf/xv-player.swf?id_video=9387976" target="Frame1"><img src="http://img-hw.xvideos-cdn.com/videos/thumbs169ll/ce/56/fb/ce56fb63444e5b5145792668027960e0/ce56fb63444e5b5145792668027960e0.13.jpg" title="kagney linn karter" border="0"></a>
+ 
+ <a href="https://static-hw.xvideos.com/swf/xv-player.swf?id_video=8391127" target="Frame1"><img src="http://img-egc.xvideos-cdn.com/videos/thumbs169ll/c8/c9/d1/c8c9d101cb23dcf13654560d62d3c96d/c8c9d101cb23dcf13654560d62d3c96d.30.jpg" title="Chinita firs tanal quest hardcore" border="0"></a>
+ 
+  <a href="https://static-hw.xvideos.com/swf/xv-player.swf?id_video=17934345" target="Frame1"><img src="http://img-hw.xvideos-cdn.com/videos/thumbs169ll/38/f3/38/38f3382446e98fec840278b0f6aa4da2/38f3382446e98fec840278b0f6aa4da2.16.jpg" title="Mulata da bunda grande levando pica no cu" border="0"></a>
+ 
+ <a href="https://static-hw.xvideos.com/swf/xv-player.swf?id_video=2826244" target="Frame1"><img src="http://img-l3.xvideos.com/videos/thumbs169ll/fb/1c/88/fb1c8844e96398f740f7e0b01b7fc997/fb1c8844e96398f740f7e0b01b7fc997.13.jpg" title="Pica branca no cu da neguinha" border="0"></a>
+ 
+ <a href="https://static-hw.xvideos.com/swf/xv-player.swf?id_video=6763857" target="Frame1"><img src="http://img-hw.xvideos-cdn.com/videos/thumbs169ll/ae/46/60/ae4660187f33e02dbdd88c076b14d2f6/ae4660187f33e02dbdd88c076b14d2f6.10.jpg" title="delicia de mulata" border="0"></a>
+  
+  </div> <hr> <div id="folha"> 
+
+ <a href="https://static-hw.xvideos.com/swf/xv-player.swf?id_video=27682151" target="Frame1"><img src="http://img-hw.xvideos-cdn.com/videos/thumbs169ll/50/61/b6/5061b6b25a55f2634bfec06b9b004da2/5061b6b25a55f2634bfec06b9b004da2.29.jpg" title="Who is she" border="0"></a>
+ 
+ <a href="https://static-hw.xvideos.com/swf/xv-player.swf?id_video=" target="Frame1"><img src="imagem da capa.jpg" title="Not video" border="0"></a>
+ 
+ <a href="https://static-hw.xvideos.com/swf/xv-player.swf?id_video=" target="Frame1"><img src="imagem da capa.jpg" title="Not video" border="0"></a>
+ 
+  <a href="https://static-hw.xvideos.com/swf/xv-player.swf?id_video=" target="Frame1"><img src="imagem da capa.jpg" title="Not video" border="0"></a>
+ 
+ <a href="https://static-hw.xvideos.com/swf/xv-player.swf?id_video=" target="Frame1"><img src="imagem da capa.jpg" title="Not video" border="0"></a>
+ 
+ <a href="https://static-hw.xvideos.com/swf/xv-player.swf?id_video=" target="Frame1"><img src="imagem da capa.jpg" title="Not video" border="0"></a>
+  
+  </div> <hr> <div id="folha"> 
+
+ <a href="https://static-hw.xvideos.com/swf/xv-player.swf?id_video=" target="Frame1"><img src="imagem da capa.jpg" title="Not video" border="0"></a>
+ 
+ <a href="https://static-hw.xvideos.com/swf/xv-player.swf?id_video=" target="Frame1"><img src="imagem da capa.jpg" title="Not video" border="0"></a>
+ 
+ <a href="https://static-hw.xvideos.com/swf/xv-player.swf?id_video=" target="Frame1"><img src="imagem da capa.jpg" title="Not video" border="0"></a>
+ 
+  <a href="https://static-hw.xvideos.com/swf/xv-player.swf?id_video=" target="Frame1"><img src="imagem da capa.jpg" title="Not video" border="0"></a>
+ 
+ <a href="https://static-hw.xvideos.com/swf/xv-player.swf?id_video=" target="Frame1"><img src="imagem da capa.jpg" title="Not video" border="0"></a>
+ 
+ <a href="https://static-hw.xvideos.com/swf/xv-player.swf?id_video=" target="Frame1"><img src="imagem da capa.jpg" title="Not video" border="0"></a>
+  
+</div></body>
+</html>
